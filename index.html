@@ -1,600 +1,901 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Capital One Finserve | 100% Property Development Financing</title>
-  <!-- Google Fonts + Font Awesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Capital One Finserve – Registered non-bank financial services in Kenya. Title deed loans, logbook loans, development financing.">
+<title>Capital One Finserve | Asset-Based Financing Kenya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --light-blue: #eef5fc;
+  --light-blue2: #d9eaf5;
+  --white: #ffffff;
+  --black: #111827;
+  --dark: #1f2a3e;
+  --border-light: #cbdde6;
+  --accent: #2c6e9e;
+  --accent-dark: #1a4a6e;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #fefcf8;
-      color: #1a1e2b;
-      line-height: 1.5;
-      scroll-behavior: smooth;
-    }
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 
-    .container {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+html { scroll-behavior:smooth; }
 
-    /* brand red & accents */
-    :root {
-      --capital-red: #c5202f;
-      --capital-red-dark: #a01824;
-      --capital-dark: #0f172a;
-      --capital-gray: #f1f5f9;
-      --capital-text: #2c3e50;
-      --shadow-sm: 0 8px 20px rgba(0,0,0,0.03), 0 2px 4px rgba(0,0,0,0.05);
-      --shadow-md: 0 12px 28px rgba(0,0,0,0.08);
-      --border-radius: 1.25rem;
-    }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--white);
+  color: var(--black);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
 
-    /* utility */
-    .text-red { color: var(--capital-red); }
-    .bg-red { background-color: var(--capital-red); }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background-color: var(--capital-red);
-      color: white;
-      font-weight: 600;
-      padding: 12px 28px;
-      border-radius: 60px;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      border: none;
-      cursor: pointer;
-      font-size: 1rem;
-      box-shadow: 0 2px 6px rgba(197,32,47,0.2);
-    }
-    .btn:hover {
-      background-color: var(--capital-red-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 12px 20px rgba(197,32,47,0.25);
-    }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid var(--capital-red);
-      color: var(--capital-red);
-      box-shadow: none;
-    }
-    .btn-outline:hover {
-      background: var(--capital-red);
-      color: white;
-    }
+/* Typography */
+h1,h2,h3,h4 { font-family: 'Cormorant Garamond', serif; line-height:1.15; font-weight: 600; }
 
-    h1, h2, h3 {
-      font-weight: 700;
-      letter-spacing: -0.02em;
-    }
+/* Utilities */
+.container { max-width:1240px; margin:0 auto; padding:0 32px; }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+.btn-primary {
+  display:inline-flex; align-items:center; gap:10px;
+  background: var(--black);
+  color: var(--white);
+  border:none; padding:15px 36px;
+  border-radius:4px;
+  font-family:'DM Sans', sans-serif;
+  font-weight:600; font-size:.95rem;
+  letter-spacing:.04em; text-transform:uppercase;
+  cursor:pointer; transition:.25s;
+  text-decoration:none;
+}
+.btn-primary:hover { background: var(--accent-dark); transform:translateY(-2px); box-shadow:0 12px 28px rgba(0,0,0,0.1); }
 
-    .section {
-      padding: 5rem 0;
-      border-bottom: 1px solid #e9edf2;
-    }
-    .section:last-of-type {
-      border-bottom: none;
-    }
+.btn-outline {
+  display:inline-flex; align-items:center; gap:10px;
+  background:transparent;
+  border:1.5px solid var(--black);
+  color: var(--black);
+  padding:14px 34px; border-radius:4px;
+  font-family:'DM Sans', sans-serif;
+  font-weight:600; font-size:.9rem;
+  letter-spacing:.04em; text-transform:uppercase;
+  cursor:pointer; transition:.25s; text-decoration:none;
+}
+.btn-outline:hover { background: var(--black); color: var(--white); }
 
-    /* header */
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.25rem 0;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .logo h1 {
-      font-size: 1.7rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #c5202f 0%, #a01824 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      letter-spacing: -0.3px;
-    }
-    .logo span {
-      font-size: 0.85rem;
-      font-weight: 500;
-      color: #4a5568;
-      display: block;
-    }
+.section-label {
+  font-family:'DM Sans', sans-serif;
+  font-size:.75rem; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase;
+  color: var(--accent); margin-bottom:16px;
+}
+.section-title {
+  font-size:clamp(2.2rem, 4vw, 3.4rem);
+  font-weight:600; color: var(--black);
+}
+.section-title.light { color: var(--white); }
+.section-sub {
+  color: #4b5563; font-size:1.05rem;
+  max-width:640px; margin-top:16px;
+}
+.section-sub.light { color: rgba(0,0,0,0.65); }
 
-    /* hero */
-    .hero {
-      padding: 3rem 0 4rem 0;
-      background: linear-gradient(145deg, #fffaf5 0%, #ffffff 100%);
-    }
-    .hero-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 3rem;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .hero-content {
-      flex: 1.2;
-    }
-    .hero-badge {
-      background: #fef2e8;
-      color: #b13e2d;
-      display: inline-block;
-      padding: 6px 16px;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-    .hero-content h1 {
-      font-size: 3.2rem;
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
-    }
-    .hero-highlight {
-      background: #fff0e5;
-      color: var(--capital-red);
-      padding: 0.2rem 0.5rem;
-      border-radius: 12px;
-      font-weight: 700;
-    }
-    .hero-stats {
-      display: flex;
-      gap: 2rem;
-      margin: 2rem 0;
-      flex-wrap: wrap;
-    }
-    .stat-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .stat-item i {
-      font-size: 2rem;
-      color: var(--capital-red);
-    }
-    .hero-right {
-      flex: 0.9;
-      background: white;
-      border-radius: 2rem;
-      padding: 1.8rem;
-      box-shadow: var(--shadow-md);
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-    .offer-card {
-      text-align: center;
-    }
-    .offer-card .big-percent {
-      font-size: 3rem;
-      font-weight: 800;
-      color: var(--capital-red);
-      line-height: 1;
-    }
+/* Divider */
+.divider { width:52px; height:2px; background: var(--black); margin:20px 0; }
+.divider.center { margin-left:auto; margin-right:auto; }
 
-    /* cards grid */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-    .feature-card {
-      background: white;
-      padding: 1.8rem;
-      border-radius: var(--border-radius);
-      transition: all 0.2s;
-      border: 1px solid #f0f2f5;
-      box-shadow: var(--shadow-sm);
-    }
-    .feature-card i {
-      font-size: 2.5rem;
-      color: var(--capital-red);
-      margin-bottom: 1rem;
-    }
-    .feature-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-    }
-    .ratio-badge {
-      background: #1e293b;
-      color: white;
-      padding: 0.25rem 0.8rem;
-      border-radius: 30px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 0.8rem;
-    }
+/* Navbar */
+.navbar {
+  position:sticky; top:0; z-index:1000;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border-light);
+}
+.nav-inner {
+  display:flex; align-items:center;
+  justify-content:space-between;
+  padding:18px 0;
+}
+.logo {
+  font-family:'Cormorant Garamond', serif;
+  font-size:1.65rem; font-weight:700;
+  color: var(--black); letter-spacing:-.01em;
+  text-decoration:none;
+}
+.logo span { color: var(--accent); }
 
-    /* steps */
-    .steps {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 1.5rem;
-      margin: 2rem 0 1rem;
-    }
-    .step {
-      flex: 1;
-      background: #ffffffdd;
-      background: white;
-      border-radius: 1.5rem;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: var(--shadow-sm);
-      border: 1px solid #eceff5;
-    }
-    .step-number {
-      width: 48px;
-      height: 48px;
-      background: var(--capital-red);
-      color: white;
-      font-weight: bold;
-      font-size: 1.4rem;
-      border-radius: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1rem;
-    }
+.nav-links {
+  display:flex; align-items:center; gap:36px; list-style:none;
+}
+.nav-links a {
+  text-decoration:none; color: var(--black);
+  font-size:.9rem; font-weight:500; letter-spacing:.02em;
+  transition:.2s; position:relative;
+}
+.nav-links a::after {
+  content:''; position:absolute; bottom:-4px; left:0;
+  width:0; height:1px; background: var(--accent); transition:.2s;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-links a:hover::after { width:100%; }
 
-    /* calculator panel */
-    .calculator-wrap {
-      background: white;
-      border-radius: 2rem;
-      padding: 2rem;
-      box-shadow: var(--shadow-md);
-      margin-top: 1rem;
-      border: 1px solid #edf2f7;
-    }
-    .input-group {
-      margin-bottom: 1.5rem;
-    }
-    .input-group label {
-      font-weight: 600;
-      display: block;
-      margin-bottom: 0.5rem;
-    }
-    .input-group input {
-      width: 100%;
-      padding: 12px 16px;
-      border-radius: 1rem;
-      border: 1px solid #cfdfed;
-      font-size: 1rem;
-      transition: 0.2s;
-    }
-    .input-group input:focus {
-      outline: none;
-      border-color: var(--capital-red);
-      box-shadow: 0 0 0 3px rgba(197,32,47,0.2);
-    }
-    .result-box {
-      background: #f8fafc;
-      padding: 1.5rem;
-      border-radius: 1.5rem;
-      margin: 1rem 0;
-    }
-    .split-bar {
-      display: flex;
-      border-radius: 40px;
-      overflow: hidden;
-      margin: 1rem 0;
-      height: 42px;
-    }
-    .split-capital {
-      background: var(--capital-red);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
-    .split-investor {
-      background: #2c7a4d;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-    }
+.nav-wa {
+  display:flex; align-items:center; gap:8px;
+  background: rgba(0,0,0,0.05);
+  border:1px solid var(--border-light);
+  color: var(--black) !important; padding:8px 18px;
+  border-radius:4px; font-size:.85rem !important;
+  transition:.2s;
+}
+.nav-wa::after { display:none !important; }
+.nav-wa:hover { background: rgba(0,0,0,0.1) !important; }
 
-    /* contact form */
-    .contact-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      background: white;
-      border-radius: 2rem;
-      padding: 2rem;
-      box-shadow: var(--shadow-sm);
-    }
-    .contact-info {
-      flex: 1;
-    }
-    .contact-form {
-      flex: 1.5;
-    }
-    .form-group {
-      margin-bottom: 1rem;
-    }
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid #e2e8f0;
-      border-radius: 1rem;
-      font-family: inherit;
-    }
-    footer {
-      background: #0f172a;
-      color: #cbd5e1;
-      padding: 2rem 0;
-      text-align: center;
-      margin-top: 1rem;
-    }
-    @media (max-width: 780px) {
-      .hero-content h1 { font-size: 2.2rem; }
-      .section { padding: 3rem 0; }
-      .navbar { flex-direction: column; text-align: center; }
-      .steps { flex-direction: column; }
-    }
-  </style>
+.hamburger { display:none; color: var(--black); font-size:1.5rem; cursor:pointer; }
+
+/* Hero */
+.hero {
+  background: var(--light-blue);
+  min-height:92vh; display:flex; align-items:center;
+  position:relative; overflow:hidden;
+  padding:80px 0;
+}
+.hero::before {
+  content:'';
+  position:absolute; inset:0;
+  background: radial-gradient(ellipse 70% 60% at 80% 50%, rgba(44,110,158,0.05) 0%, transparent 70%);
+}
+.hero-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center;
+  position:relative; z-index:2;
+}
+.hero-eyebrow {
+  font-family:'DM Sans', sans-serif;
+  font-size:.8rem; letter-spacing:.18em; font-weight:600;
+  text-transform:uppercase; color: var(--accent); margin-bottom:24px;
+}
+.hero-title {
+  font-size:clamp(2.8rem, 5.5vw, 5rem);
+  font-weight:600; color: var(--black);
+  line-height:1.08;
+}
+.hero-title em { color: var(--accent); font-style:normal; }
+.hero-body {
+  color: #4b5563;
+  font-size:1.1rem; margin:28px 0 40px;
+  max-width:480px;
+}
+.hero-badges {
+  display:flex; gap:24px; flex-wrap:wrap; margin-top:36px;
+}
+.hero-badge {
+  display:flex; align-items:center; gap:8px;
+  font-size:.85rem; color: #4b5563;
+}
+.hero-badge i { color: var(--accent); font-size:.95rem; }
+
+/* Calculator card */
+.calc-card {
+  background: var(--white);
+  border:1px solid var(--border-light);
+  border-radius:12px; padding:36px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+}
+.calc-card h3 {
+  font-size:1.6rem; color: var(--black); margin-bottom:28px;
+  display:flex; align-items:center; gap:12px;
+}
+.calc-card h3 i { color: var(--accent); font-size:1.4rem; }
+
+.slider-row { margin-bottom:24px; }
+.slider-label {
+  display:flex; justify-content:space-between;
+  font-size:.85rem; color: #4b5563;
+  margin-bottom:10px;
+}
+.slider-label strong { color: var(--black); font-size:.95rem; }
+
+input[type="range"] {
+  -webkit-appearance:none; appearance:none;
+  width:100%; height:4px;
+  border-radius:4px;
+  background: var(--border-light);
+  outline:none; cursor:pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance:none;
+  width:18px; height:18px;
+  border-radius:50%;
+  background: var(--accent);
+  border:2px solid var(--white);
+  box-shadow:0 0 0 3px rgba(44,110,158,0.2);
+}
+
+.calc-result {
+  background: var(--light-blue);
+  border:1px solid var(--border-light);
+  border-radius:8px; padding:20px 24px;
+  margin:24px 0;
+}
+.calc-result .monthly {
+  font-family:'Cormorant Garamond', serif;
+  font-size:2.8rem; font-weight:600; color: var(--accent);
+  line-height:1;
+}
+.calc-result .detail {
+  font-size:.85rem; color: #4b5563; margin-top:6px;
+}
+
+/* About */
+.about { padding:100px 0; background: var(--white); }
+.about-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;
+}
+.about-image-block {
+  position:relative; height:460px;
+}
+.about-bg-card {
+  position:absolute; inset:0;
+  background: var(--light-blue);
+  border-radius:12px;
+  overflow:hidden;
+}
+.about-bg-card::before {
+  content:'';
+  position:absolute; inset:0;
+  background: linear-gradient(135deg, rgba(44,110,158,0.1), transparent 60%);
+}
+.about-bg-card-inner {
+  position:absolute; inset:0;
+  display:flex; align-items:center; justify-content:center; flex-direction:column;
+  gap:16px;
+}
+.about-bg-card-inner i { font-size:5rem; color: rgba(44,110,158,0.2); }
+.about-frame-accent {
+  position:absolute; bottom:-20px; right:-20px;
+  width:200px; height:200px;
+  border:2px solid rgba(0,0,0,0.08);
+  border-radius:12px; z-index:-1;
+}
+.about-stat-row {
+  display:flex; gap:40px; margin-top:36px; flex-wrap:wrap;
+}
+.about-stat { border-left:2px solid var(--accent); padding-left:16px; }
+.about-stat .num {
+  font-family:'Cormorant Garamond', serif;
+  font-size:2.4rem; font-weight:700; color: var(--black); line-height:1;
+}
+.about-stat .label { font-size:.82rem; color: #4b5563; margin-top:4px; }
+
+/* Services */
+.services { padding:100px 0; background: var(--light-blue); }
+.services-header { text-align:center; margin-bottom:64px; }
+.services-grid {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(270px, 1fr));
+  gap:2px; border:1px solid var(--border-light); border-radius:12px;
+  overflow:hidden;
+}
+.service-card {
+  background: var(--white); padding:40px 36px;
+  border-right:1px solid var(--border-light);
+  transition:.25s; cursor:default; position:relative; overflow:hidden;
+}
+.service-card:last-child { border-right:none; }
+.service-card::after {
+  content:''; position:absolute; bottom:0; left:0;
+  width:0; height:3px; background: var(--accent); transition:.3s;
+}
+.service-card:hover { background: var(--light-blue); }
+.service-card:hover::after { width:100%; }
+.service-card:hover h3 { color: var(--black); }
+.service-card:hover p { color: #4b5563; }
+.service-card:hover .svc-icon { color: var(--accent); }
+
+.svc-icon { font-size:2rem; color: var(--black); margin-bottom:20px; transition:.25s; }
+.service-card h3 { font-size:1.5rem; color: var(--black); margin-bottom:12px; transition:.25s; }
+.service-card p { font-size:.92rem; color: #4b5563; line-height:1.7; transition:.25s; }
+
+/* Logbook */
+.logbook { padding:100px 0; background: var(--white); }
+.logbook-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start;
+}
+.doc-pills {
+  display:flex; flex-wrap:wrap; gap:12px; margin:28px 0;
+}
+.pill {
+  display:flex; align-items:center; gap:8px;
+  background: var(--light-blue); border:1px solid var(--border-light);
+  padding:10px 18px; border-radius:4px;
+  font-size:.88rem; font-weight:500; color: var(--black);
+}
+.pill i { color: var(--accent); }
+
+.feature-list { display:flex; flex-direction:column; gap:16px; margin-top:24px; }
+.feature-item {
+  display:flex; align-items:flex-start; gap:14px;
+  padding:18px 20px;
+  background: var(--light-blue);
+  border-radius:8px;
+  border-left:3px solid var(--accent);
+}
+.feature-item i { color: var(--accent); margin-top:3px; flex-shrink:0; }
+.feature-item h4 { font-size:1.05rem; font-family:'DM Sans',sans-serif; font-weight:600; }
+.feature-item p { font-size:.88rem; color: #4b5563; margin-top:3px; }
+
+/* Development */
+.development { padding:100px 0; background: var(--light-blue); }
+.dev-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center;
+}
+.dev-card {
+  background: var(--white);
+  border:1px solid var(--border-light);
+  border-radius:12px; padding:40px;
+}
+.dev-item {
+  display:flex; gap:18px; padding:20px 0;
+  border-bottom:1px solid var(--border-light);
+  align-items:flex-start;
+}
+.dev-item:last-child { border-bottom:none; padding-bottom:0; }
+.dev-num {
+  font-family:'Cormorant Garamond', serif;
+  font-size:2rem; font-weight:700; color: var(--accent);
+  line-height:1; flex-shrink:0; width:36px;
+}
+.dev-item h4 { font-family:'DM Sans', sans-serif; font-weight:600; color: var(--black); font-size:.95rem; }
+.dev-item p { font-size:.87rem; color: #4b5563; margin-top:4px; }
+
+/* Stats Banner */
+.stats-banner {
+  background: var(--black);
+  color: var(--white);
+  padding:56px 0;
+}
+.stats-inner {
+  display:flex; justify-content:space-around; flex-wrap:wrap; gap:40px;
+}
+.stat-item { text-align:center; }
+.stat-item .num {
+  font-family:'Cormorant Garamond', serif;
+  font-size:3.6rem; font-weight:700; color: var(--white);
+  line-height:1;
+}
+.stat-item .lbl { font-size:.85rem; font-weight:600; color: rgba(255,255,255,0.7); letter-spacing:.08em; text-transform:uppercase; margin-top:6px; }
+
+/* Apply Section */
+.apply-section { padding:100px 0; background: var(--white); }
+.apply-grid {
+  display:grid; grid-template-columns:1fr 1.4fr; gap:72px; align-items:start;
+}
+.apply-left h2 { font-size:clamp(2rem, 4vw, 3rem); color: var(--black); }
+.apply-left p { color: #4b5563; margin:20px 0; font-size:1rem; }
+.why-list { display:flex; flex-direction:column; gap:14px; margin-top:28px; }
+.why-item {
+  display:flex; align-items:center; gap:14px;
+  font-size:.9rem; color: var(--black);
+}
+.why-item i { color: var(--accent); font-size:1rem; flex-shrink:0; }
+
+.apply-form-card {
+  background: var(--white);
+  border:1px solid var(--border-light);
+  border-radius:12px; padding:48px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.02);
+}
+.apply-form-card h3 { font-size:1.8rem; color: var(--black); margin-bottom:28px; }
+
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.form-group { margin-bottom:16px; }
+.form-group.full { grid-column:1/-1; }
+.form-group label {
+  display:block; font-size:.8rem; font-weight:600;
+  letter-spacing:.05em; text-transform:uppercase;
+  color: #4b5563; margin-bottom:6px;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width:100%; padding:13px 16px;
+  border:1px solid var(--border-light);
+  border-radius:6px;
+  font-family:'DM Sans', sans-serif;
+  font-size:.93rem; color: var(--black);
+  background: var(--white);
+  transition:.2s; outline:none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent); box-shadow:0 0 0 3px rgba(44,110,158,0.1);
+}
+.form-group textarea { resize:vertical; min-height:100px; }
+.form-note {
+  font-size:.8rem; color: #4b5563;
+  margin-top:16px; text-align:center;
+}
+
+/* Footer */
+footer {
+  background: var(--light-blue);
+  color: #4b5563;
+  padding:72px 0 32px;
+  border-top: 1px solid var(--border-light);
+}
+.footer-grid {
+  display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:48px;
+  padding-bottom:56px;
+  border-bottom:1px solid var(--border-light);
+}
+.footer-brand .logo { display:block; margin-bottom:16px; text-decoration:none; color: var(--black); }
+.footer-brand p { font-size:.88rem; line-height:1.8; max-width:300px; color: #4b5563; }
+.footer-contact { margin-top:20px; display:flex; flex-direction:column; gap:10px; }
+.footer-contact a {
+  display:flex; align-items:center; gap:10px;
+  color: #4b5563; text-decoration:none;
+  font-size:.87rem; transition:.2s;
+}
+.footer-contact a:hover { color: var(--accent); }
+.footer-contact a i { color: var(--accent); width:16px; }
+
+.footer-col h4 {
+  font-family:'DM Sans', sans-serif;
+  font-size:.78rem; font-weight:600;
+  letter-spacing:.12em; text-transform:uppercase;
+  color: var(--accent); margin-bottom:20px;
+}
+.footer-col ul { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.footer-col ul li a {
+  color: #4b5563; text-decoration:none;
+  font-size:.87rem; transition:.2s;
+}
+.footer-col ul li a:hover { color: var(--black); }
+.footer-bottom {
+  padding-top:28px;
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px;
+  font-size:.82rem;
+}
+.footer-bottom a { color: #4b5563; text-decoration:none; }
+
+/* Floating buttons */
+.floating-buttons {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 900;
+}
+.float-wa, .float-call, .float-fb {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.25s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.float-wa {
+  background: #25D366;
+}
+.float-call {
+  background: var(--accent);
+}
+.float-fb {
+  background: #1877f2;
+}
+.float-wa i, .float-call i, .float-fb i {
+  color: white;
+  font-size: 1.5rem;
+}
+.float-wa:hover, .float-call:hover, .float-fb:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile menu overlay */
+.mobile-nav {
+  display:none; position:fixed; inset:0; z-index:999;
+  background: var(--white); flex-direction:column;
+  align-items:center; justify-content:center; gap:32px;
+}
+.mobile-nav.open { display:flex; }
+.mobile-nav a {
+  font-family:'Cormorant Garamond', serif;
+  font-size:2.2rem; color: var(--black); text-decoration:none;
+  transition:.2s;
+}
+.mobile-nav a:hover { color: var(--accent); }
+.mobile-close {
+  position:absolute; top:24px; right:28px;
+  color: var(--black); font-size:1.8rem; cursor:pointer;
+}
+
+/* Responsive */
+@media(max-width:900px) {
+  .hero-grid, .about-grid, .logbook-grid, .dev-grid, .apply-grid { grid-template-columns:1fr; gap:48px; }
+  .footer-grid { grid-template-columns:1fr 1fr; }
+  .nav-links { display:none; }
+  .hamburger { display:block; }
+  .about-image-block { height:280px; }
+  .form-grid { grid-template-columns:1fr; }
+  .apply-form-card { padding:28px; }
+}
+@media(max-width:600px) {
+  .container { padding:0 20px; }
+  .footer-grid { grid-template-columns:1fr; }
+  .stats-inner { gap:28px; }
+  .stat-item .num { font-size:2.8rem; }
+}
+
+.reveal {
+  opacity:0; transform:translateY(28px);
+  transition:opacity .6s ease, transform .6s ease;
+}
+.reveal.visible { opacity:1; transform:none; }
+</style>
 </head>
 <body>
+
+<!-- Floating Buttons: WhatsApp, Call, Facebook -->
+<div class="floating-buttons">
+  <a href="https://wa.me/254101797321" class="float-wa" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+254101797321" class="float-call">
+    <i class="fas fa-phone-alt"></i>
+  </a>
+  <a href="https://www.facebook.com/CapitalOne" class="float-fb" target="_blank" rel="noopener">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+</div>
+
+<!-- Mobile nav overlay -->
+<div class="mobile-nav" id="mobileNav">
+  <span class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></span>
+  <a href="#" onclick="closeMobile()">Home</a>
+  <a href="#loans" onclick="closeMobile()">Loans</a>
+  <a href="#logbook" onclick="closeMobile()">Logbook</a>
+  <a href="#development" onclick="closeMobile()">Development</a>
+  <a href="#apply" onclick="closeMobile()">Apply Now</a>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="logo">Capital One <span>Finserve</span></a>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#loans">Loans</a></li>
+      <li><a href="#logbook">Logbook</a></li>
+      <li><a href="#development">Development</a></li>
+      <li><a href="#apply">Apply</a></li>
+      <li><a href="https://wa.me/254101797321" class="nav-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+    </ul>
+    <span class="hamburger" id="hamburger"><i class="fas fa-bars"></i></span>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
   <div class="container">
-    <div class="navbar">
-      <div class="logo">
-        <h1>Capital One Finserve</h1>
-        <span>Property development · Smart financing</span>
-      </div>
+    <div class="hero-grid">
       <div>
-        <a href="#contact" class="btn" style="background:var(--capital-red);">Apply now <i class="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge"><i class="fas fa-building"></i> 100% financing · Title deed only</div>
-          <h1>Unlock property development with <span class="hero-highlight">zero down payment</span></h1>
-          <p style="font-size: 1.2rem; color:#2d3e50; margin-bottom: 1rem;">Capital One Finserve offers complete 100% financing for your development project. All you need is a <strong>genuine title deed</strong>. No hidden collateral, no upfront costs.</p>
-          <div class="hero-stats">
-            <div class="stat-item"><i class="fas fa-hand-holding-usd"></i> <span><strong>100% funded</strong><br>development cost</span></div>
-            <div class="stat-item"><i class="fas fa-file-signature"></i> <span><strong>Genuine title deed</strong><br>primary requirement</span></div>
-            <div class="stat-item"><i class="fas fa-chart-line"></i> <span><strong>70/30 rental split</strong><br>until full repayment</span></div>
-          </div>
-          <a href="#contact" class="btn">Get pre-qualified <i class="fas fa-check-circle"></i></a>
+        <p class="hero-eyebrow">Registered Non-Bank Lender · Kenya</p>
+        <h1 class="hero-title">Unlock capital<br>against your <em>assets</em></h1>
+        <p class="hero-body">Fast, transparent financing using title deeds, logbooks, and property. Up to Ksh 20M disbursed within 72 hours — no hidden fees.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="#apply" class="btn-primary">Apply Now <i class="fas fa-arrow-right"></i></a>
+          <a href="#loans" class="btn-outline">Our Products</a>
         </div>
-        <div class="hero-right">
-          <div class="offer-card">
-            <i class="fas fa-handshake" style="font-size: 2.5rem; color: var(--capital-red);"></i>
-            <div class="big-percent">70% / 30%</div>
-            <p style="font-weight: 600;">Rental sharing ratio</p>
-            <p style="font-size: 0.9rem; margin: 12px 0;"><span class="ratio-badge" style="background: #c5202f;">70% to Capital One</span> <span class="ratio-badge" style="background: #2c5f2d;">30% to you</span></p>
-            <hr style="margin: 1rem 0; opacity: 0.2;">
-            <p><i class="fas fa-check-circle text-red"></i> <strong>Until full repayment</strong><br>After full repayment → 100% rental income is yours.</p>
-          </div>
+        <div class="hero-badges">
+          <span class="hero-badge"><i class="fas fa-shield-alt"></i> Regulated & Licensed</span>
+          <span class="hero-badge"><i class="fas fa-clock"></i> 72-Hour Approval</span>
+          <span class="hero-badge"><i class="fas fa-handshake"></i> Transparent Terms</span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Features / Topics -->
-  <div class="container section">
-    <h2 style="text-align: center;">Why choose Capital One Finserve?</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <i class="fas fa-percent"></i>
-        <h3>100% Financing</h3>
-        <p>Full coverage of property development costs — from ground-up construction to major renovations. Zero down payment.</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-landmark"></i>
-        <h3>Genuine Title Deed</h3>
-        <p>Your authentic title deed is the only requirement. No complex credit checks, no extra collateral needed.</p>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-chart-pie"></i>
-        <h3>Rental Sharing 70/30</h3>
-        <p>Until the financed amount is fully repaid, 70% of rental income goes to Capital One, 30% stays with you.</p>
-        <div class="ratio-badge" style="background:#1e293b;">post repayment: 100% yours</div>
-      </div>
-      <div class="feature-card">
-        <i class="fas fa-charging-station"></i>
-        <h3>Accelerated Repayment</h3>
-        <p>Higher rental income means faster repayment — no fixed schedules, your success drives the timeline.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- How it works + visual split -->
-  <div class="container section">
-    <h2 style="text-align: center;">How the 100% financing model works</h2>
-    <div class="steps">
-      <div class="step"><div class="step-number">1</div><h3>Submit title deed</h3><p>Present your genuine property title deed for verification.</p></div>
-      <div class="step"><div class="step-number">2</div><h3>Get 100% funding</h3><p>We finance your entire development project — no deposit required.</p></div>
-      <div class="step"><div class="step-number">3</div><h3>Generate rental income</h3><p>Lease the developed property and start receiving monthly rent.</p></div>
-      <div class="step"><div class="step-number">4</div><h3>70/30 split until repayment</h3><p>70% of rent goes to Capital One, 30% to you until loan is cleared.</p></div>
-      <div class="step"><div class="step-number">5</div><h3>Full ownership & 100% rent</h3><p>After full repayment, you keep 100% of all rental income.</p></div>
-    </div>
-  </div>
-
-  <!-- Interactive Rental Sharing Estimator + Repayment timeline -->
-  <div class="container section">
-    <h2 style="text-align: center;">Estimate your repayment timeline <i class="fas fa-calculator text-red"></i></h2>
-    <p style="text-align: center; margin-bottom: 2rem;">Based on the 70/30 rental sharing ratio — see how fast you can repay 100% financing.</p>
-    <div class="calculator-wrap">
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 1.5rem;">
-        <div class="input-group">
-          <label><i class="fas fa-dollar-sign"></i> Financing amount (100% development cost)</label>
-          <input type="number" id="loanAmount" value="250000" step="5000">
+      <!-- Calculator -->
+      <div class="calc-card">
+        <h3><i class="fas fa-calculator"></i> Loan Estimator</h3>
+        <div class="slider-row">
+          <div class="slider-label">
+            <span>Loan Amount</span>
+            <strong id="amtDisplay">Ksh 500,000</strong>
+          </div>
+          <input type="range" id="loanAmt" min="50000" max="20000000" step="50000" value="500000">
         </div>
-        <div class="input-group">
-          <label><i class="fas fa-home"></i> Expected monthly rental income</label>
-          <input type="number" id="monthlyRent" value="3200" step="100">
+        <div class="slider-row">
+          <div class="slider-label">
+            <span>Repayment Period</span>
+            <strong id="moDisplay">12 months</strong>
+          </div>
+          <input type="range" id="loanMo" min="1" max="48" value="12">
+        </div>
+        <div class="calc-result">
+          <div class="monthly" id="calcMonthly">Ksh 42,917</div>
+          <div class="detail">estimated monthly repayment</div>
+          <div style="display:flex;justify-content:space-between;margin-top:16px;border-top:1px solid var(--border-light);padding-top:14px;">
+            <div>
+              <div style="font-size:.78rem;color:#4b5563;text-transform:uppercase;letter-spacing:.06em;">Total Payback</div>
+              <div style="color:var(--black);font-weight:500;margin-top:3px;" id="calcTotal">Ksh 515,000</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:.78rem;color:#4b5563;text-transform:uppercase;letter-spacing:.06em;">Interest Rate</div>
+              <div style="color:var(--black);font-weight:500;margin-top:3px;">3% p.a.</div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-primary" style="width:100%;justify-content:center;" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">
+          Apply for this Loan <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-block">
+        <div class="about-bg-card">
+          <div class="about-bg-card-inner">
+            <i class="fas fa-university"></i>
+            <p style="color:#4b5563;font-size:.9rem;text-align:center;padding:0 40px;">Registered under Kenyan Companies Act</p>
+          </div>
+        </div>
+        <div class="about-frame-accent"></div>
+      </div>
+      <div class="reveal">
+        <p class="section-label">Who We Are</p>
+        <h2 class="section-title">A trusted partner in asset-backed lending</h2>
+        <div class="divider"></div>
+        <p style="color:#4b5563;line-height:1.85;margin-top:20px;">Capital One Finserve is a registered non-bank financial services provider in Kenya. We specialize in title deed loans, logbook loans, development financing, and property share investments — delivering fast, client-first credit solutions with full transparency.</p>
+        <p style="color:#4b5563;line-height:1.85;margin-top:16px;">Our team of dedicated relationship managers ensures every client receives personalised guidance from application to disbursement.</p>
+        <div class="about-stat-row">
+          <div class="about-stat">
+            <div class="num">10+</div>
+            <div class="label">Years Operating</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">98%</div>
+            <div class="label">Client Satisfaction</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">2,000+</div>
+            <div class="label">Active Clients</div>
+          </div>
+        </div>
+        <a href="#apply" class="btn-outline" style="margin-top:36px;">Start Your Application</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="loans" class="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <p class="section-label">Our Products</p>
+      <h2 class="section-title">Financial solutions for every need</h2>
+      <div class="divider center"></div>
+      <p class="section-sub" style="margin:0 auto;">Whether you need working capital, vehicle-backed credit, or development funding — we have a solution designed around you.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="svc-icon"><i class="fas fa-home"></i></div>
+        <h3>Title Deed Loans</h3>
+        <p>Leverage your land title to access up to Ksh 20M. Fast disbursement with flexible terms from 3 to 12 months.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon"><i class="fas fa-car"></i></div>
+        <h3>Logbook Loans</h3>
+        <p>Keep driving while you borrow. Competitive rates, no CRB checks, and approval in as little as 15 minutes.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon"><i class="fas fa-building"></i></div>
+        <h3>Development Loans</h3>
+        <p>100% financing for rental properties. 70:30 revenue share model — no upfront capital required from you.</p>
+      </div>
+      <div class="service-card">
+        <div class="svc-icon"><i class="fas fa-chart-pie"></i></div>
+        <h3>Property Share Investment</h3>
+        <p>Co-own prime real estate with a low entry point. Enjoy passive returns from professionally managed assets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Logbook -->
+<section id="logbook" class="logbook">
+  <div class="container">
+    <div class="logbook-grid">
+      <div class="reveal">
+        <p class="section-label">Logbook Loans</p>
+        <h2 class="section-title">Borrow using your vehicle — keep driving</h2>
+        <div class="divider"></div>
+        <p style="color:#4b5563;margin-top:20px;line-height:1.85;">Use your vehicle as collateral without surrendering it. We offer up to 90% of vehicle value, with repayment spread across 3 to 24 months at competitive rates.</p>
+        <div class="doc-pills">
+          <span class="pill"><i class="fas fa-check"></i> No CRB Listing</span>
+          <span class="pill"><i class="fas fa-clock"></i> 24-Hour Funding</span>
+          <span class="pill"><i class="fas fa-file"></i> Minimal Docs</span>
+          <span class="pill"><i class="fas fa-car"></i> Keep Your Vehicle</span>
+        </div>
+        <a href="#apply" class="btn-primary" style="margin-top:8px;">Apply for Logbook Loan</a>
+      </div>
+      <div class="reveal">
+        <p style="font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:20px;">Required Documents</p>
+        <div class="feature-list">
+          <div class="feature-item"><i class="fas fa-id-card"></i><div><h4>National ID</h4><p>Valid Kenyan national identity card</p></div></div>
+          <div class="feature-item"><i class="fas fa-camera"></i><div><h4>Passport Photo</h4><p>Recent colour passport-sized photograph</p></div></div>
+          <div class="feature-item"><i class="fas fa-file-invoice"></i><div><h4>KRA PIN Certificate</h4><p>Valid KRA personal identification number</p></div></div>
+          <div class="feature-item"><i class="fas fa-university"></i><div><h4>Bank Statements</h4><p>Last 6 months of bank statements</p></div></div>
+          <div class="feature-item"><i class="fas fa-book"></i><div><h4>Original Logbook</h4><p>Vehicle registration document (original)</p></div></div>
+          <div class="feature-item"><i class="fas fa-shield-alt"></i><div><h4>Comprehensive Insurance</h4><p>Valid comprehensive vehicle insurance cover</p></div></div>
         </div>
       </div>
-      <div class="result-box" id="calcResults">
-        <!-- dynamic content -->
-      </div>
-      <p style="font-size: 0.8rem; color:#4b5563; margin-top: 1rem;"><i class="fas fa-info-circle"></i> Illustrative example: 70% of monthly rent goes toward repaying the financed amount. After full repayment, rental sharing becomes 100% to you.</p>
     </div>
   </div>
+</section>
 
-  <!-- Testimonial / Trust message about title deed -->
-  <div class="container section" style="padding-top: 0;">
-    <div style="background: linear-gradient(115deg, #fff4ef 0%, #fff9f5 100%); border-radius: 2rem; padding: 2.5rem; text-align: center;">
-      <i class="fas fa-file-contract" style="font-size: 3rem; color: var(--capital-red); opacity: 0.9;"></i>
-      <h3 style="margin: 1rem 0 0.5rem;">All you need is a genuine title deed</h3>
-      <p style="max-width: 700px; margin: 0 auto;">No hidden fees, no personal guarantees beyond the property. Your title deed secures the financing, unlocking 100% capital for development while you benefit from rental cash flow from day one.</p>
-      <div style="margin-top: 1.5rem;"><i class="fas fa-check-circle text-red"></i> Fast approval · <i class="fas fa-check-circle text-red"></i> Transparent 70/30 split · <i class="fas fa-check-circle text-red"></i> No monthly service pressure</div>
+<!-- Development -->
+<section id="development" class="development">
+  <div class="container">
+    <div class="dev-grid">
+      <div class="reveal">
+        <p class="section-label">Development Finance</p>
+        <h2 class="section-title">Build with zero equity upfront</h2>
+        <div class="divider"></div>
+        <p class="section-sub" style="margin-top:20px;margin-left:0;">We finance 100% of your property development — apartments, commercial buildings, and more. You bring the title deed; we provide the capital.</p>
+        <div style="margin-top:36px;">
+          <p style="font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:12px;">Revenue Share Model</p>
+          <div style="background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:20px 24px;display:flex;gap:40px;flex-wrap:wrap;">
+            <div><div style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--black);line-height:1;">70%</div><div style="font-size:.82rem;color:#4b5563;margin-top:4px;">Capital One Finserve<br>until full repayment</div></div>
+            <div style="display:flex;align-items:center;color:#4b5563;font-size:1.4rem;">→</div>
+            <div><div style="font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:700;color:var(--accent);line-height:1;">30%</div><div style="font-size:.82rem;color:#4b5563;margin-top:4px;">To You<br>from day one</div></div>
+          </div>
+          <p style="font-size:.82rem;color:#4b5563;margin-top:10px;"><i class="fas fa-info-circle" style="color:var(--accent);margin-right:6px;"></i>Full ownership reverts to you upon complete repayment.</p>
+        </div>
+        <a href="#apply" class="btn-primary" style="margin-top:36px;">Request Consultation</a>
+      </div>
+      <div class="dev-card reveal">
+        <p style="font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;color:var(--accent);margin-bottom:24px;">Why Developers Choose Us</p>
+        <div class="dev-item"><div class="dev-num">01</div><div><h4>100% Financing</h4><p>No personal capital required. We fund the entire construction cost.</p></div></div>
+        <div class="dev-item"><div class="dev-num">02</div><div><h4>Immediate Cash Flow</h4><p>Earn 30% of rental income from day one while repaying.</p></div></div>
+        <div class="dev-item"><div class="dev-num">03</div><div><h4>Long-term Partnership</h4><p>We're invested in your success — our returns depend on the project performing.</p></div></div>
+        <div class="dev-item"><div class="dev-num">04</div><div><h4>Transparent Agreements</h4><p>Every term is documented clearly. No surprises, ever.</p></div></div>
+        <div class="dev-item"><div class="dev-num">05</div><div><h4>50+ Projects Funded</h4><p>Proven track record across Nairobi and Kenya's key counties.</p></div></div>
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- Contact & Application Form -->
-  <div class="container section" id="contact">
-    <h2 style="text-align: center;">Ready to develop with 100% financing?</h2>
-    <p style="text-align: center; margin-bottom: 2rem;">Submit your details & title deed information — a Capital One Finserve specialist will reach out within 24h.</p>
-    <div class="contact-grid">
-      <div class="contact-info">
-        <i class="fas fa-building" style="font-size: 2rem; color: var(--capital-red);"></i>
-        <h3 style="margin: 0.75rem 0;">Talk to our property finance team</h3>
-        <p><i class="fas fa-phone-alt"></i> +254101797321</p>
-        <p><i class="fas fa-envelope"></i> finserve@capitalone.com</p>
-        <p><i class="fas fa-map-marker-alt"></i> Nairobi Emporor Plaza</p>
-        <hr style="margin: 1.5rem 0;">
-        <p><strong>100% financing</strong> + <strong>title deed</strong> = unlock your property’s potential. Rental sharing works in your favor until full repayment.</p>
+<!-- Stats Banner -->
+<div class="stats-banner">
+  <div class="container stats-inner">
+    <div class="stat-item"><div class="num">80%</div><div class="lbl">Approval Rate</div></div>
+    <div class="stat-item"><div class="num">Ksh 2.5B+</div><div class="lbl">Disbursed to Date</div></div>
+    <div class="stat-item"><div class="num">2,000+</div><div class="lbl">Active Clients</div></div>
+    <div class="stat-item"><div class="num">48hrs</div><div class="lbl">Avg. Funding Time</div></div>
+  </div>
+</div>
+
+<!-- Apply Section -->
+<section id="apply" class="apply-section">
+  <div class="container">
+    <div class="apply-grid">
+      <div class="reveal">
+        <p class="section-label">Get Started</p>
+        <h2 class="apply-left">Apply for financing today</h2>
+        <div class="divider"></div>
+        <p style="color:#4b5563;margin-top:20px;line-height:1.85;">Complete the form and a dedicated relationship manager will contact you within 2 hours. All information is treated with strict confidentiality.</p>
+        <div class="why-list">
+          <div class="why-item"><i class="fas fa-check-circle"></i><span>No upfront fees or application charges</span></div>
+          <div class="why-item"><i class="fas fa-check-circle"></i><span>Dedicated relationship manager assigned</span></div>
+          <div class="why-item"><i class="fas fa-check-circle"></i><span>Decision communicated within 2 business hours</span></div>
+          <div class="why-item"><i class="fas fa-check-circle"></i><span>Funds disbursed as fast as 24–72 hours</span></div>
+          <div class="why-item"><i class="fas fa-check-circle"></i><span>Flexible repayment structured around you</span></div>
+        </div>
+        <a href="https://wa.me/254101797321" target="_blank" class="btn-outline" style="margin-top:36px;"><i class="fab fa-whatsapp"></i> Or Chat on WhatsApp</a>
       </div>
-      <div class="contact-form">
-        <form id="leadForm">
-          <div class="form-group">
-            <input type="text" placeholder="Full name *" id="fullname" required>
+      <div class="apply-form-card reveal">
+        <h3>Loan Application</h3>
+        <form id="loanForm">
+          <div class="form-grid">
+            <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your full name" required></div>
+            <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="+254 7XX XXX XXX" required></div>
+            <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+            <div class="form-group"><label>Loan Type</label><select required><option value="">Select product</option><option>Title Deed Loan</option><option>Logbook Loan</option><option>Development Loan</option><option>Property Share Investment</option></select></div>
+            <div class="form-group"><label>Amount Required (KES)</label><input type="number" placeholder="e.g. 500,000"></div>
+            <div class="form-group"><label>County / Location</label><input type="text" placeholder="e.g. Nairobi"></div>
+            <div class="form-group full"><label>Tell us about your asset or project</label><textarea placeholder="Brief description of the collateral or development..."></textarea></div>
           </div>
-          <div class="form-group">
-            <input type="email" placeholder="Email address *" id="email" required>
-          </div>
-          <div class="form-group">
-            <input type="tel" placeholder="Phone number" id="phone">
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Property location / Title deed reference (optional)" id="property">
-          </div>
-          <div class="form-group">
-            <textarea rows="3" placeholder="Tell us about your development project & expected rental revenue..." id="message"></textarea>
-          </div>
-          <button type="submit" class="btn" style="width:100%; justify-content: center;">Submit application <i class="fas fa-paper-plane"></i></button>
-          <p style="font-size: 0.7rem; margin-top: 1rem; color: #5c6b7e;">By submitting, you agree to our financing terms. A genuine title deed is required for final approval.</p>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:17px;">Submit Application <i class="fas fa-arrow-right"></i></button>
+          <p class="form-note">By submitting, you agree to our privacy policy. A relationship manager will contact you within 2 hours.</p>
         </form>
       </div>
     </div>
   </div>
+</section>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 Capital One Finserve — Financing for property developers. <br> “100% financing against genuine title deed. Rental sharing: 70% to Capital One until full repayment, 30% to investor.” <br> <span style="font-size:0.75rem;">Terms and conditions apply. This is an informational page — final offer subject to eligibility and title deed verification.</span></p>
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo">Capital One <span>Finserve</span></a>
+        <p>Registered non-bank financial services provider in Kenya under the Companies Act. Licensed credit provider offering transparent, fast, and client-first financing solutions.</p>
+        <div class="footer-contact">
+          <a href="tel:+254101797321"><i class="fas fa-phone"></i> +254 101 797 321</a>
+          <a href="mailto:hello@capitalonefinserve.co.ke"><i class="fas fa-envelope"></i> hello@capitalonefinserve.co.ke</a>
+          <a href="#"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Products</h4><ul><li><a href="#loans">Title Deed Loans</a></li><li><a href="#logbook">Logbook Loans</a></li><li><a href="#development">Development Loans</a></li><li><a href="#loans">Property Share</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#apply">Apply Now</a></li><li><a href="#">Careers</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Legal</h4><ul><li><a href="#">Terms of Use</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Complaints Policy</a></li><li><a href="#">Disclosure</a></li></ul></div>
     </div>
-  </footer>
+    <div class="footer-bottom">
+      <span>© 2026 Capital One Finserve Ltd. All rights reserved.</span>
+      <span><a href="#">Regulated under the Kenya Companies Act</a></span>
+    </div>
+  </div>
+</footer>
 
-  <script>
-    // Interactive calculator for rental sharing & repayment timeline
-    const loanInput = document.getElementById('loanAmount');
-    const rentInput = document.getElementById('monthlyRent');
-    const resultsDiv = document.getElementById('calcResults');
+<script>
+// Loan Calculator
+const amtSlider = document.getElementById('loanAmt');
+const moSlider  = document.getElementById('loanMo');
+const amtDisp   = document.getElementById('amtDisplay');
+const moDisp    = document.getElementById('moDisplay');
+const monthly   = document.getElementById('calcMonthly');
+const total     = document.getElementById('calcTotal');
 
-    function updateEstimator() {
-      let loan = parseFloat(loanInput.value);
-      let rent = parseFloat(rentInput.value);
-      if (isNaN(loan)) loan = 250000;
-      if (isNaN(rent)) rent = 3200;
-      if (loan < 0) loan = 0;
-      if (rent < 0) rent = 0;
+function fmt(n) { return 'Ksh ' + Math.round(n).toLocaleString('en-KE'); }
+function calcLoan() {
+  const p = +amtSlider.value, m = +moSlider.value;
+  amtDisp.textContent = fmt(p);
+  moDisp.textContent  = m + ' month' + (m > 1 ? 's' : '');
+  const totalVal = p * (1 + 0.03 * (m / 12));
+  monthly.textContent = fmt(totalVal / m);
+  total.textContent   = fmt(totalVal);
+}
+amtSlider.addEventListener('input', calcLoan);
+moSlider.addEventListener('input', calcLoan);
+calcLoan();
 
-      const shareCapital = rent * 0.7;   // 70% to Capital One (repayment)
-      const shareInvestor = rent * 0.3;   // 30% to you
+// Form Submit
+document.getElementById('loanForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type=submit]');
+  const original = btn.innerHTML;
+  btn.innerHTML = '✓ Application Submitted!';
+  btn.style.background = '#2c6e9e';
+  btn.style.color = '#fff';
+  setTimeout(() => { btn.innerHTML = original; btn.style.background=''; btn.style.color=''; }, 4000);
+  e.target.reset();
+});
 
-      let monthsToRepay = 'N/A';
-      let repayYears = '—';
-      if (shareCapital > 0 && loan > 0) {
-        monthsToRepay = Math.ceil(loan / shareCapital);
-        repayYears = (monthsToRepay / 12).toFixed(1);
-      } else if (loan === 0) {
-        monthsToRepay = 0;
-        repayYears = 0;
-      } else if (shareCapital === 0 && loan > 0) {
-        monthsToRepay = '∞ (rental income required)';
-      }
+// Mobile Menu
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.getElementById('mobileNav').classList.add('open');
+});
+document.getElementById('mobileClose').addEventListener('click', closeMobile);
+function closeMobile() {
+  document.getElementById('mobileNav').classList.remove('open');
+}
 
-      const capitalPercent = 70;
-      const investorPercent = 30;
-
-      // Build HTML result
-      resultsDiv.innerHTML = `
-        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-          <div><i class="fas fa-chart-simple"></i> <strong>Monthly rental split</strong><br>
-          <span style="font-size: 1.6rem; font-weight: 700; color:#c5202f;">$${shareCapital.toFixed(2)}</span> <span style="font-weight:600;">(70%)</span> → Capital One<br>
-          <span style="font-size: 1.6rem; font-weight: 700; color:#2c7a4d;">$${shareInvestor.toFixed(2)}</span> <span style="font-weight:600;">(30%)</span> → You
-          </div>
-          <div><i class="fas fa-clock"></i> <strong>Estimated repayment duration</strong><br>
-          <span style="font-size: 1.5rem; font-weight: 800;">${typeof monthsToRepay === 'number' ? monthsToRepay + ' months' : monthsToRepay}</span><br>
-          ${typeof monthsToRepay === 'number' && monthsToRepay > 0 ? `≈ ${repayYears} years at current rent` : '—'}
-          </div>
-        </div>
-        <div class="split-bar">
-          <div class="split-capital" style="width: 70%;">70% Capital One (repayment)</div>
-          <div class="split-investor" style="width: 30%;">30% your income</div>
-        </div>
-        <div style="background:#f1f5f9; border-radius: 1rem; padding: 0.8rem; margin-top: 0.5rem;">
-          <i class="fas fa-lightbulb"></i> <strong>How it works:</strong> 70% of monthly rent goes directly toward repaying the financed amount. You receive 30% immediately. Once the full financing of <strong>$${loan.toLocaleString()}</strong> is repaid, you keep 100% of rental income (currently $${rent.toLocaleString()}/month). 
-          ${shareCapital > 0 && loan > 0 ? `At current rental, full ownership achieved in ~${monthsToRepay} months.` : ''}
-        </div>
-      `;
-    }
-
-    loanInput.addEventListener('input', updateEstimator);
-    rentInput.addEventListener('input', updateEstimator);
-    updateEstimator();
-
-    // Contact form submission - redirect to Gmail
-    const form = document.getElementById('leadForm');
-    if (form) {
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = document.getElementById('fullname')?.value.trim();
-        const email = document.getElementById('email')?.value.trim();
-        const phone = document.getElementById('phone')?.value.trim();
-        const property = document.getElementById('property')?.value.trim();
-        const message = document.getElementById('message')?.value.trim();
-        
-        if (!name || !email) {
-          alert('Please provide your full name and email address.');
-          return;
-        }
-        
-        const subject = `New Application from ${name} - Capital One Finserve`;
-        const body = `Full Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nProperty Location: ${property}\n\nMessage/Project Details:\n${message}`;
-        const mailtoLink = `mailto:managercapital1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailtoLink;
-      });
-    }
-  </script>
+// Scroll Reveal
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+reveals.forEach(r => io.observe(r));
+</script>
 </body>
-</html># capital-one-finserve
+</html>
